@@ -2,5 +2,5 @@
   STH' 15
 
 <:Body>
-  <h3>Welcome onboard Captain {{Volt.user._name}} !</h3>
+  <h3>Welcome onboard Captain {{Volt.user._name.split(/(\W)/).map(&:capitalize).join}} !</h3>
 
