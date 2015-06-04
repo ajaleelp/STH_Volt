@@ -2,5 +2,9 @@
   STH' 15
 
 <:Body>
+  {{if Volt.user}}
   <h3>Welcome onboard Captain {{Volt.user._name.split(/(\W)/).map(&:capitalize).join}} !</h3>
+  {{else}}
+  <h3>Please sign in to set sail !</h3>
+  {{end}}
 
