@@ -3,7 +3,8 @@
 
 <:Body>
   {{if Volt.user}}
-  <h3>Welcome onboard Captain {{Volt.user._name.split(/(\W)/).map(&:capitalize).join}} !</h3>
+  <h3>Welcome onboard Captain {{Volt.user._nick.split(/(\W)/).map(&:capitalize).join}} !</h3>
+  <h5>Team {{Volt.user._team.capitalize}} awaits you ..</h5>
   {{ view public_chat_path, {controller_group: 'main'} }}
 
   {{else}}
