@@ -10,7 +10,10 @@ gem 'volt-bootstrap', '~> 0.0.10'
 gem 'volt-bootstrap_jumbotron_theme', '~> 0.1.0'
 
 # User templates for login, signup, and logout menu.
-gem 'volt-user_templates', '~> 0.1.3'
+# gem 'volt-user_templates', '~> 0.1.3'
+
+# manually copied volt_user_template componenet from github repo. Adding its required gems
+gem 'volt-fields', '~> 0.1.0'
 
 group :development, :test do
   # Testing dependencies
