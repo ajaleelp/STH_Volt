@@ -6,9 +6,11 @@
 
   <div class="well conversation">
     {{ _private_chat_messages.each do |message| }}
+      {{ if message._team == Volt.user._team}}
       <div class="message {{ if message._sender_id == Volt.user._id }} sent {{ end }}">
         <p>{{ message._text }}</p>
       </div>
+      {{ end }}
     {{ end }}
 
     {{ if _private_chat_messages.count == 0 }}
