@@ -11,10 +11,10 @@ module PublicChat
       # Add code for when the about view is loaded
     end
 
-    def send_message
-      unless page._new_message.strip.empty?
-      _public_chat_messages << { sender_id: Volt.user._id, text: page._new_message }
-      page._new_message = ''
+    def send_public_message
+      unless page._new_public_message.strip.empty?
+      _public_chat_messages << { sender_id: Volt.user._id, text: page._new_public_message }
+      page._new_public_message = ''
       end
     end
 

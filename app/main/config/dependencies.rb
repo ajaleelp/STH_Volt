@@ -11,3 +11,4 @@ component 'bootstrap_jumbotron_theme'
 component 'user_templates'
 
 component 'public_chat'
+component 'private_chat'

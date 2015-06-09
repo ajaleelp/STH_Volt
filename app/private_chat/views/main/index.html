@@ -1,5 +1,28 @@
 <:Title>
-  Component Index
+  private chat index view title
 
 <:Body>
-  <h1>Component Index</h1>
+  <h5>Team {{Volt.user._team}}'s private chat will appear here</h5>
+
+  <div class="well conversation">
+    {{ _private_chat_messages.each do |message| }}
+      <div class="message {{ if message._sender_id == Volt.user._id }} sent {{ end }}">
+        <p>{{ message._text }}</p>
+      </div>
+    {{ end }}
+
+    {{ if _private_chat_messages.count == 0 }}
+      <p>No one has talked yet. Start chatting!</p>
+    {{ else }}
+      <div class="clearfix"></div>
+    {{ end }}
+
+    <form e-submit="send_private_message" role="form">
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Write a message" value="{{ page._new_private_message }}" />
+        <button type="submit" class="btn btn-primary pull-right">Send</button>
+      </div>
+
+    </form>
+  </div>
+
