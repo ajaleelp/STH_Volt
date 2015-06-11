@@ -18,15 +18,15 @@ module Main
     end
 
     def public_chat_path
-      "#{params._component || 'public_chat'}/#{params._controller || 'main'}/#{params._action || 'index'}"
+      "public_chat/#{params._controller || 'main'}/#{params._action || 'index'}"
     end
 
     def private_chat_path
-      "#{params._component || 'private_chat'}/#{params._controller || 'main'}/#{params._action || 'index'}"
+      "private_chat/#{params._controller || 'main'}/#{params._action || 'index'}"
     end
 
     def game_screen_path
-      "#{params._component || 'game_screen'}/#{params._controller || 'main'}/#{params._action || 'index'}"
+      "game_screen/#{params._controller || 'main'}/#{params._action || 'index'}"
     end
 
     # Determine if the current nav component is the active one by looking
