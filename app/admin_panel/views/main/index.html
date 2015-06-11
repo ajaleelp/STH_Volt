@@ -3,3 +3,20 @@
 
 <:Body>
   <h1>Admin Panel</h1>
+
+  <form e-submit="add_clue">
+    {{ if errors.present? }}
+      <div class="alert alert-danger">{{ errors }}</div>
+    {{ end }}
+
+    <div class="form-group">
+      <label class="control-label">Level</label>
+      <input class="form-control" type="text" value="{{ level }}" autofocus />
+    </div>
+    <div class="form-group">
+      <label class="control-label">Clue image</label>
+      <input class="form-control" type="file" value="{{ clue_image }}">
+    </div>
+
+    <button class="btn btn-info btn-block">Upload</button>
+  </form>
