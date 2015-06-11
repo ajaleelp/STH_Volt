@@ -7,6 +7,7 @@
   <h5>Team {{Volt.user._team.capitalize}} awaits you ..</h5>
   {{ view public_chat_path, {controller_group: 'main'} }}
   {{ view private_chat_path, {controller_group: 'main'} }}
+  {{ view game_screen_path, {controller_group: 'main'} }}
 
   {{else}}
   <h3>Please sign in to set sail !</h3>
