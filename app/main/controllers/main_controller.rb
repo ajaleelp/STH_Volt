@@ -25,6 +25,10 @@ module Main
       "#{params._component || 'private_chat'}/#{params._controller || 'main'}/#{params._action || 'index'}"
     end
 
+    def game_screen_path
+      "#{params._component || 'game_screen'}/#{params._controller || 'main'}/#{params._action || 'index'}"
+    end
+
     # Determine if the current nav component is the active one by looking
     # at the first part of the url against the href attribute.
     def active_tab?
